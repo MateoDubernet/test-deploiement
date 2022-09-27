@@ -6,52 +6,38 @@ class Calculatrice {
     inputNumber2 = document.querySelector('#number2');
     displayResult = document.querySelector('#result');
 
+    add = document.querySelector("#add")
+    sub = document.querySelector('#sub');
+    mul = document.querySelector('#mul');
+    div = document.querySelector('#div');
+
     constructor(){}
 
     additionner(){
         this.result = this.inputNumber1.valueAsNumber + this.inputNumber2.valueAsNumber;
-        console.log(this.result);
         this.displayResult.innerHTML = this.result;
     }
 
     soustraire(){
         this.result = this.inputNumber1.valueAsNumber - this.inputNumber2.valueAsNumber;
-        console.log(this.result);
         this.displayResult.innerHTML = this.result;
     }
 
     multiplier(){
         this.result = this.inputNumber1.valueAsNumber * this.inputNumber2.valueAsNumber;
-        console.log(this.result);
         this.displayResult.innerHTML = this.result;
     }
 
     diviser(){
         this.result = this.inputNumber1.valueAsNumber / this.inputNumber2.valueAsNumber;
-        console.log(this.result);
         this.displayResult.innerHTML = this.result;
     }
 }
 
-const add = document.querySelector("#add")
-const sub = document.querySelector('#sub');
-const mul = document.querySelector('#mul');
-const div = document.querySelector('#div');
-
 let calc = new Calculatrice();
+calc.add.addEventListener('click', () => calc.additionner());
+calc.sub.addEventListener('click', () => calc.soustraire());
+calc.mul.addEventListener('click', () => calc.multiplier());
+calc.div.addEventListener('click', () => calc.diviser());
 
-if(add !== null){
-    add.addEventListener('click', () => calc.additionner())
-}
-
-if(sub !== null){
-    sub.addEventListener('click', () => calc.soustraire())
-}
-
-if(mul !== null){
-    mul.addEventListener('click', () => calc.multiplier())
-}
-
-if(div !== null){
-    div.addEventListener('click', () => calc.diviser())
-}
+module.exports = { calc }
