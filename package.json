@@ -1,0 +1,22 @@
+{
+  "name": "test-deploiement",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "user.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MateoDubernet/calculatrice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MateoDubernet/calculatrice/issues"
+  },
+  "homepage": "https://github.com/MateoDubernet/calculatrice#readme",
+  "devDependencies": {
+    "jest": "^29.0.3"
+  }
+}
