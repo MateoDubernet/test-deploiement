@@ -7,6 +7,6 @@ describe('Calc Test', () => {
         // When
         const result = calc.result;
         // Then
-        expect(result).toBeGreaterThanOrEqual(result);
+        expect(result).toBeDefined();
     })
 })
