@@ -7,10 +7,12 @@ class User {
 
     constructor(){}
 
-    setUserValue(){
-        this.email = "mateo.dubernet@gmail.com";
-        this.nom = "mateo";
-        this.prenom = "dubernet";
-        this.age = 21;
+    setUserValue(email, nom, prenom, age){
+        this.email = email /*"mateo.dubernet@gmail.com"*/;
+        this.nom = nom/*"mateo"*/;
+        this.prenom = prenom/*"dubernet"*/;
+        this.age = age/*21*/;
     }
 }
+
+exports.User = User;
