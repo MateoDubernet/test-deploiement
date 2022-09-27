@@ -40,4 +40,4 @@ calc.sub.addEventListener('click', () => calc.soustraire());
 calc.mul.addEventListener('click', () => calc.multiplier());
 calc.div.addEventListener('click', () => calc.diviser());
 
-module.exports = { calc }
+module.exports = { Calculatrice }

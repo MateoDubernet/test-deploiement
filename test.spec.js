@@ -1,4 +1,4 @@
-import { calc } from 'calculatrice.js'
+const calc = require('calculatrice')
 
 describe('Calc Test', () => {
     it('must calculate number', () => {
