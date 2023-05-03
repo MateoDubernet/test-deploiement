@@ -4,8 +4,6 @@
 name: Node.js Package
 
 on:
-  merge_request:
-    branches: [ main ]
   pull_request:
     branches: [ main ]
 
