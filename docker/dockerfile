@@ -1,1 +1,4 @@
-FROM baseImage
+FROM node:alpine
+
+
+CMD ["npm", "start"]
