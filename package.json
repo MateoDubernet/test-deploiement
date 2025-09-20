@@ -2,7 +2,6 @@
   "name": "test-deploiement-calculatrice",
   "version": "1.0.0",
   "description": "Calculatrice avec tests et déploiement Docker",
-  "type": "module",
   "main": "app.js",
   "scripts": {
     "test": "jest"

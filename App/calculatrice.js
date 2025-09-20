@@ -1,4 +1,4 @@
-export class Calculatrice {
+class Calculatrice {
     result;
 
     constructor() {}
@@ -16,6 +16,6 @@ export class Calculatrice {
     }
 
     diviser(a, b) { 
-        return this.result = b === 0 ? "Erreur : division par 0" : a / b; this.result; 
+        return this.result = b === 0 ? "Erreur : division par 0" : a / b;
     }
 }

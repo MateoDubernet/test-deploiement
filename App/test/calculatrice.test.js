@@ -1,6 +1,6 @@
-import { Calculatrice } from './calculatrice/calculatrice.js';
+const Calculatrice = require('./calculatrice.node.js'); // chemin relatif vers ce fichier
 
-describe("Calc Test", () => {
+describe("Tests Calculatrice", () => {
     let calc;
 
     beforeEach(() => {

@@ -1,5 +1,3 @@
-import { Calculatrice } from './calculatrice/calculatrice.js';
-
 const calc = new Calculatrice();
 
 function getValues() {
