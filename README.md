@@ -2,6 +2,8 @@
 
 Une petite application de calculatrice déployée avec **Docker** et testée automatiquement via **GitHub Actions**.
 
+---
+
 ## Prérequis Docker
 
 Avant de lancer l’application avec Docker, s'assurer que :
