@@ -1,32 +1,29 @@
-const calculatrice = require('./calculatrice')
-class TestCalculatrice extends calculatrice.Calculatrice{
+const Calculatrice = require("./calculatrice");
 
-    constructor(){
-        super();
-    }
+describe("Calc Test", () => {
+    let calc;
 
-    isValide(){
-        describe('Calc Test', () => {
-            it('must calculate number', () => {
-        
-                const add = this.additionner(5, 10);
-                const sub = this.soustraire(5, 10);
-                const mul = this.multiplier(5, 10);
-                const div = this.diviser(5, 10);
-        
-                expect(add).toBeDefined();
-                expect(sub).toBeDefined();
-                expect(mul).toBeDefined();
-                expect(div).toBeDefined();
+    beforeEach(() => {
+        calc = new Calculatrice();
+    });
 
-                expect(add).toEqual(15);
-                expect(sub).toEqual(-5);
-                expect(mul).toEqual(50);
-                expect(div).toEqual(0.5);
-            })
-        })
-    }
-}
+    test("addition", () => {
+        expect(calc.additionner(5, 10)).toBe(15);
+    });
 
-let testCalculatrice = new TestCalculatrice();
-testCalculatrice.isValide();
+    test("soustraction", () => {
+        expect(calc.soustraire(5, 10)).toBe(-5);
+    });
+
+    test("multiplication", () => {
+        expect(calc.multiplier(5, 10)).toBe(50);
+    });
+
+    test("division", () => {
+        expect(calc.diviser(5, 10)).toBe(0.5);
+    });
+
+    test("division par zéro", () => {
+        expect(calc.diviser(5, 0)).toBe("Erreur : division par 0");
+    });
+});
