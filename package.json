@@ -18,5 +18,6 @@
   "homepage": "https://github.com/MateoDubernet/calculatrice#readme",
   "devDependencies": {
     "jest": "^29.0.3"
-  }
+  },
+  "type": "module"
 }
