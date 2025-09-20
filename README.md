@@ -2,6 +2,18 @@
 
 Une petite application de calculatrice déployée avec **Docker** et testée automatiquement via **GitHub Actions**.
 
+## Prérequis Docker
+
+Avant de lancer l’application avec Docker, s'assurer que :
+
+- **Docker Desktop est installé et démarré**  
+  Sur Windows/Mac, ouvrir l’application Docker Desktop avant toute commande.  
+
+- **Une connexion Internet est disponible** pour télécharger les images.  
+  Attention : certains VPN/pare-feux peuvent bloquer l’accès à Docker Hub. Les désactiver si nécessaire.  
+
+- **Docker Compose est installé** (il est inclus dans Docker Desktop). 
+
 ---
 
 ## Fonctionnalités
@@ -19,6 +31,7 @@ Une petite application de calculatrice déployée avec **Docker** et testée aut
 Possible d'utiliser un simple serveur web pour tester l’application localement.
 
 ```bash
+    cd App
     npx http-server .
 ```
 Puis ouvrir : http://localhost:8080 dans le navigateur
