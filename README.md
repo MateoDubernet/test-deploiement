@@ -4,6 +4,24 @@ Une petite application de calculatrice déployée avec **Docker** et testée aut
 
 ---
 
+## Structure du projet
+Pour que l’application fonctionne à la fois dans le navigateur et avec Jest pour les tests, deux versions de la classe Calculatrice sont utilisé :
+
+1. Navigateur (Docker/Nginx)
+
+- Fichier : App/calculatrice.js
+- Contient la classe Calculatrice sans require ni module.exports.
+- Est chargé dans index.html via <script src="calculatrice.js"></script>.
+- Utilisé par app.js pour manipuler le DOM et afficher les résultats dans le navigateur.
+
+2. Tests Node/Jest
+
+- Fichier : App/tests/calculatrice.node.js
+- Contient la même logique, mais exportée avec CommonJS : module.exports = Calculatrice;
+- Permet à Jest d’importer la classe et d’exécuter les tests unitaires.
+
+---
+
 ## Prérequis Docker
 
 Avant de lancer l’application avec Docker, s'assurer que :
