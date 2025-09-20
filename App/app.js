@@ -1,4 +1,4 @@
-const Calculatrice = require("./calculatrice"); // si tu veux ES modules : import Calculatrice from "./calculatrice.js";
+import { Calculatrice } from './calculatrice/calculatrice.js';
 
 const calc = new Calculatrice();
 
@@ -10,24 +10,20 @@ function getValues() {
 
 document.getElementById("add").addEventListener("click", () => {
     const { number1, number2 } = getValues();
-    document.getElementById("result").innerText =
-        "Résultat : " + calc.additionner(number1, number2);
+    document.getElementById("result").innerText = "Résultat : " + calc.additionner(number1, number2);
 });
 
 document.getElementById("sub").addEventListener("click", () => {
     const { number1, number2 } = getValues();
-    document.getElementById("result").innerText =
-        "Résultat : " + calc.soustraire(number1, number2);
+    document.getElementById("result").innerText = "Résultat : " + calc.soustraire(number1, number2);
 });
 
 document.getElementById("mul").addEventListener("click", () => {
     const { number1, number2 } = getValues();
-    document.getElementById("result").innerText =
-        "Résultat : " + calc.multiplier(number1, number2);
+    document.getElementById("result").innerText = "Résultat : " + calc.multiplier(number1, number2);
 });
 
 document.getElementById("div").addEventListener("click", () => {
     const { number1, number2 } = getValues();
-    document.getElementById("result").innerText =
-        "Résultat : " + calc.diviser(number1, number2);
+    document.getElementById("result").innerText = "Résultat : " + calc.diviser(number1, number2);
 });

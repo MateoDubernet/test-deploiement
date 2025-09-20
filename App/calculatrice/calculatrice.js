@@ -1,32 +1,21 @@
-class Calculatrice {
+export class Calculatrice {
     result;
 
     constructor() {}
 
-    additionner(number1, number2) {
-        this.result = number1 + number2;
-        return this.result;
+    additionner(a, b) { 
+        return this.result = a + b; 
     }
 
-    soustraire(number1, number2) {
-        this.result = number1 - number2;
-        return this.result;
+    soustraire(a, b) { 
+        return this.result = a - b; 
     }
 
-    multiplier(number1, number2) {
-        this.result = number1 * number2;
-        return this.result;
+    multiplier(a, b) { 
+        return this.result = a * b; 
     }
 
-    diviser(number1, number2) {
-        if (number2 === 0) {
-            this.result = "Erreur : division par 0";
-        } else {
-            this.result = number1 / number2;
-        }
-        return this.result;
+    diviser(a, b) { 
+        return this.result = b === 0 ? "Erreur : division par 0" : a / b; this.result; 
     }
 }
-
-// Export pour Jest (Node)
-module.exports = Calculatrice;
