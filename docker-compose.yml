@@ -2,9 +2,8 @@ version: '3'
 
 services:
   web:
+    build: .
     image: calcul:v1
     hostname: localhost
-    volumes:
-      - /usr/share/nginx/html
     ports: 
       - 8080:80
