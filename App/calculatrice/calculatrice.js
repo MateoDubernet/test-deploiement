@@ -2,6 +2,9 @@ class Calculatrice {
 
     result;
 
+    // Commentaire à modifier pour tester github actions :
+    // Test
+
     constructor(){}
 
     additionner(number1, number2){
